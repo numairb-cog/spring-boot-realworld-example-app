@@ -373,7 +373,8 @@ public class ArticleDatafetcher {
     return Article.newBuilder()
         .body(articleData.getBody())
         .createdAt(
-            DateTimeFormatter.ISO_DATE_TIME.format(articleData.getCreatedAt().atZone(ZoneOffset.UTC)))
+            DateTimeFormatter.ISO_DATE_TIME.format(
+                articleData.getCreatedAt().atZone(ZoneOffset.UTC)))
         .description(articleData.getDescription())
         .favorited(articleData.isFavorited())
         .favoritesCount(articleData.getFavoritesCount())
@@ -381,7 +382,8 @@ public class ArticleDatafetcher {
         .tagList(articleData.getTagList())
         .title(articleData.getTitle())
         .updatedAt(
-            DateTimeFormatter.ISO_DATE_TIME.format(articleData.getUpdatedAt().atZone(ZoneOffset.UTC)))
+            DateTimeFormatter.ISO_DATE_TIME.format(
+                articleData.getUpdatedAt().atZone(ZoneOffset.UTC)))
         .build();
   }
 }
